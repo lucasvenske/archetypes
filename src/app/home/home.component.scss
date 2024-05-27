@@ -38,16 +38,8 @@
     }
 }
 
-.teste {
-    position: relative;
-}
-
 .scrolldiv {
     position: absolute;
-}
-
-.mock {
-    height: 1500px;
 }
 
 .fixed-content {
@@ -77,13 +69,42 @@
         transition-duration: 0.5s;
     }
 
+    .poster {
+        position: absolute;
+        height: calc(100% - 6rem);
+        transform: translateX(-500px);
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
+
+    .archetype {
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+    }
+
+
     &.active {
         .body-card-arch {
             width: 350px;
+        }
+
+        .archetype {
+            opacity: 0;
+        }
+
+        .poster {
+            transform: translateX(0);
         }
     }
 }
 
 .text-body {
     min-width: 350px;
+}
+
+.store-section {
+    height: 100vh;
+    width: 100%;
+    background-color: $background-color;
 }

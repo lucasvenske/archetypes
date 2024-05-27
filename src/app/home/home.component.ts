@@ -26,10 +26,11 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.windowWidth = window.innerWidth;
-      console.log(this.mainScroll)
+      console.log(this.mainScroll.nativeElement.getBoundingClientRect())
       console.log(document.getElementById('teste')?.scrollWidth)
       this.scrollHeight = 5600;
     }, 0);
+
     this.elDistanceToTop = window.scrollY + this.mainScroll.nativeElement.getBoundingClientRect().top;
 
   }
@@ -47,8 +48,9 @@ export class HomeComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollTop - this.elDistanceToTop <= this.mainScroll.nativeElement.scrollWidth - window.innerWidth / 3) {
+    }
     this.renderer.setStyle(this.mainScroll.nativeElement, 'transform', `translateX(-${scrollTop - this.elDistanceToTop}px)`);
-
   }
 
   onClickCard(id: string) {
