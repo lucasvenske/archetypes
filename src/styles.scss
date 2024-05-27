@@ -73,3 +73,108 @@ body {
 .ff-catavalo {
     font-family: 'catavalo' !important;
 }
+
+.fn-sage-color {
+    color: $secondary-color !important;
+}
+
+.fn-queen-color {
+    color: $queen-color !important;
+}
+
+.fn-warrior-color {
+    color: $warrior-color !important;
+}
+
+.fn-mother-color {
+    color: $mother-color !important;
+}
+
+.fn-lover-color {
+    color: $primary-color !important;
+}
+
+.fn-mystic-color {
+    color: $mystic-color !important;
+}
+
+.fn-maiden-color {
+    color: $maiden-color !important;
+}
+
+.bd-theme.border-sage-color {
+    border-top-color: $secondary-color !important;
+    border-bottom-color: $secondary-color !important;
+    border-left-color: $secondary-color !important;
+    border-right-color: $secondary-color !important;
+}
+
+.bd-theme.border-queen-color {
+    border-top-color: $queen-color !important;
+    border-bottom-color: $queen-color !important;
+    border-left-color: $queen-color !important;
+    border-right-color: $queen-color !important;
+}
+
+.bd-theme.border-warrior-color {
+    border-top-color: $warrior-color !important;
+    border-bottom-color: $warrior-color !important;
+    border-left-color: $warrior-color !important;
+    border-right-color: $warrior-color !important;
+}
+
+.bd-theme.border-mother-color {
+    border-top-color: $mother-color !important;
+    border-bottom-color: $mother-color !important;
+    border-left-color: $mother-color !important;
+    border-right-color: $mother-color !important;
+}
+
+.bd-theme.border-lover-color {
+    border-top-color: $primary-color !important;
+    border-bottom-color: $primary-color !important;
+    border-left-color: $primary-color !important;
+    border-right-color: $primary-color !important;
+}
+
+.bd-theme.border-mystic-color {
+    border-top-color: $mystic-color !important;
+    border-bottom-color: $mystic-color !important;
+    border-left-color: $mystic-color !important;
+    border-right-color: $mystic-color !important;
+}
+
+.bd-theme.border-maiden-color {
+    border-top-color: $maiden-color !important;
+    border-bottom-color: $maiden-color !important;
+    border-left-color: $maiden-color !important;
+    border-right-color: $maiden-color !important;
+}
+
+.backsquare-sage {
+    background-color: $secondary-color;
+}
+
+.backsquare-warrior {
+    background-color: $warrior-color;
+}
+
+.backsquare-queen {
+    background-color: $queen-color;
+}
+
+.backsquare-mother {
+    background-color: $mother-color;
+}
+
+.backsquare-lover {
+    background-color: $primary-color;
+}
+
+.backsquare-mystic {
+    background-color: $mystic-color;
+}
+
+.backsquare-maiden {
+    background-color: $maiden-color;
+}

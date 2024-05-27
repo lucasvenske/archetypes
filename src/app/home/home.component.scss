@@ -104,7 +104,50 @@
 }
 
 .store-section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: $background-color;
+}
+
+.store-selector.active {
+    .star-store {
+        transform: rotate(90deg);
+    }
+
+    .arch-store {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.arch-store {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition-property: transform opacity;
+    transition-duration: 0.8s;
+}
+
+.star-store {
+    transition-property: transform;
+    transition-duration: 0.8s;
+    transform: rotate(0);
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+
+    &:hover+.arch-store {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.backsquare {
+    position: absolute;
+    z-index: -1;
+    width: 87%;
+    top: 50%;
+    bottom: 50%;
+    height: 90%;
+    margin: auto;
 }

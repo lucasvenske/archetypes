@@ -22,6 +22,7 @@ export class HomeComponent implements AfterViewInit {
   public scrollHeight: number = 0;
   public elDistanceToTop: number = 0;
   public currentCardId: string = '';
+  public currentStoreId: string = 'sage';
 
   ngAfterViewInit(): void {
     setTimeout(() => {
@@ -59,5 +60,13 @@ export class HomeComponent implements AfterViewInit {
 
   isActiveCard(id: string) {
     return this.currentCardId === id;
+  }
+
+  onClickStore(id: string) {
+    this.currentStoreId = id === this.currentStoreId ? '' : id;
+  }
+
+  isStoreActive(id: string) {
+    return this.currentStoreId === id;
   }
 }
