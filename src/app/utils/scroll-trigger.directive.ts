@@ -14,9 +14,9 @@ export class ScrollTriggerDirective {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const rect = this.el.nativeElement.getBoundingClientRect();
-    if (rect.top <= 50) {
+    if (rect.top <= 30) {
       this.reachTop.emit();
-    } else if (rect.top >= 50) {
+    } else if (rect.top >= 30) {
       this.unreachTop.emit();
     }
   }
