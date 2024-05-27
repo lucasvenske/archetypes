@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'catavalo';
+    src: url('./assets/fonts/catavalo-light.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'britanica';
+    src: url('./assets/fonts/britanica.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'britanica-bold';
+    src: url('./assets/fonts/britanica-bold.ttf') format("truetype");
+}
+
+@import "bootstrap";
+
+@import 'bootstrap/scss/bootstrap';
+
+@import "./assets/theme";
+
+@import "./assets/var";
+
+body {
+    background-color: $background-color !important;
+}
+
+.bd-theme.border-color {
+    border-top-color: #000 !important;
+    border-bottom-color: #000 !important;
+    border-left-color: #000 !important;
+    border-right-color: #000 !important;
+}
+
+.bd-theme.border-primary-color {
+    border-top-color: $primary-color !important;
+    border-bottom-color: $primary-color !important;
+    border-left-color: $primary-color !important;
+    border-right-color: $primary-color !important;
+}
+
+.bd-theme.border-secondary-color {
+    border-top-color: $secondary-color !important;
+    border-bottom-color: $secondary-color !important;
+    border-left-color: $secondary-color !important;
+    border-right-color: $secondary-color !important;
+}
+
+.fn-color {
+    color: $font-color !important;
+}
+
+.fn-primary-color {
+    color: $primary-color !important;
+}
+
+.fn-secondary-color {
+    color: $secondary-color !important;
+}
+
+.ff-britanica {
+    font-family: 'britanica' !important;
+}
+
+.ff-britanica {
+    font-family: 'britanica' !important;
+}
+
+.ff-britanica-bold {
+    font-family: 'britanica-bold' !important;
+}
+
+.ff-catavalo {
+    font-family: 'catavalo' !important;
+}
