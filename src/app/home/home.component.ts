@@ -24,6 +24,14 @@ export class HomeComponent implements AfterViewInit {
   public currentCardId: string = '';
   public currentStoreId: string = 'sage';
 
+  public sageShirt: string = '../../assets/img/front-sage.png';
+  public queenShirt: string = '../../assets/img/front-queen.png';
+  public warriorShirt: string = '../../assets/img/front-warrior.png';
+  public motherShirt: string = '../../assets/img/front-mother.png';
+  public loverShirt: string = '../../assets/img/front-lover.png';
+  public mysticShirt: string = '../../assets/img/front-mystic.png';
+  public maidenShirt: string = '../../assets/img/front-maiden.png';
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.windowWidth = window.innerWidth;
@@ -63,7 +71,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   onClickStore(id: string) {
-    this.currentStoreId = id === this.currentStoreId ? '' : id;
+    this.currentStoreId = id;
   }
 
   isStoreActive(id: string) {

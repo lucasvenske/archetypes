@@ -407,53 +407,56 @@
             </svg>
         </div>
         <div class="row justify-content-center mt-5">
-            <div class="col text-center store-selector" [class.active]="isStoreActive('sage')">
-                <img src="../../assets/img/star1.svg" class="star-store pointer w-70-px" (click)="onClickStore('sage')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('sage')"
+                (click)="onClickStore('sage')">
+                <img src="../../assets/img/star1.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-sage-color">the sage</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('queen')">
-                <img src="../../assets/img/star2.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('queen')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('queen')"
+                (click)="onClickStore('queen')">
+                <img src="../../assets/img/star2.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-queen-color">the queen</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('warrior')">
-                <img src="../../assets/img/star3.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('warrior')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('warrior')"
+                (click)="onClickStore('warrior')">
+                <img src="../../assets/img/star3.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-warrior-color">the warrior</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('mother')">
-                <img src="../../assets/img/star4.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('mother')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('mother')"
+                (click)="onClickStore('mother')">
+                <img src="../../assets/img/star4.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-mother-color">the mother</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('lover')">
-                <img src="../../assets/img/star5.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('lover')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('lover')"
+                (click)="onClickStore('lover')">
+                <img src="../../assets/img/star5.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-lover-color">the lover</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('mystic')">
-                <img src="../../assets/img/star6.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('mystic')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('mystic')"
+                (click)="onClickStore('mystic')">
+                <img src="../../assets/img/star6.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-mystic-color">the mystic</p>
             </div>
-            <div class="col text-center store-selector" [class.active]="isStoreActive('maiden')">
-                <img src="../../assets/img/star7.svg" class="star-store pointer w-70-px"
-                    (click)="onClickStore('maiden')">
+            <div class="col text-center store-selector pointer" [class.active]="isStoreActive('maiden')"
+                (click)="onClickStore('maiden')">
+                <img src="../../assets/img/star7.svg" class="star-store w-70-px">
                 <p class="ff-britanica-bold fs-4 arch-store fn-maiden-color">the maiden</p>
             </div>
         </div>
         <div class="row mt-3" *ngIf="currentStoreId == 'sage'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-sage.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
+                    <img [src]="sageShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="sageShirt = '../../assets/img/back-sage.png'"
+                        (mouseout)="sageShirt = '../../assets/img/front-sage.png'">
                     <div class="backsquare backsquare-sage"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-sage-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-sage.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-sage"></div>
                 </div>
@@ -461,7 +464,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-sage.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-sage"></div>
                 </div>
@@ -471,15 +474,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'queen'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-queen.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
+                    <img [src]="queenShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="queenShirt = '../../assets/img/back-queen.png'"
+                        (mouseout)="queenShirt = '../../assets/img/front-queen.png'">
                     <div class="backsquare backsquare-queen"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-queen-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-queen.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-queen"></div>
                 </div>
@@ -487,7 +492,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-queen.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-queen"></div>
                 </div>
@@ -497,15 +502,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'warrior'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-warrior.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
+                    <img [src]="warriorShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="warriorShirt = '../../assets/img/back-warrior.png'"
+                        (mouseout)="warriorShirt = '../../assets/img/front-warrior.png'">
                     <div class="backsquare backsquare-warrior"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-warrior-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-warrior.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-warrior"></div>
                 </div>
@@ -513,7 +520,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-warrior.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-warrior"></div>
                 </div>
@@ -523,15 +530,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'mother'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-mother.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
+                    <img [src]="motherShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="motherShirt = '../../assets/img/back-mother.png'"
+                        (mouseout)="motherShirt = '../../assets/img/front-mother.png'">
                     <div class="backsquare backsquare-mother"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-mother-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-mother.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-mother"></div>
                 </div>
@@ -539,7 +548,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-mother.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-mother"></div>
                 </div>
@@ -549,15 +558,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'lover'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-lover.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
+                    <img [src]="loverShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="loverShirt = '../../assets/img/back-lover.png'"
+                        (mouseout)="loverShirt = '../../assets/img/front-lover.png'">
                     <div class="backsquare backsquare-lover"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-lover-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-lover.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-lover"></div>
                 </div>
@@ -565,7 +576,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-lover.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-lover"></div>
                 </div>
@@ -575,15 +586,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'mystic'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-mystic.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
+                    <img [src]="mysticShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="mysticShirt = '../../assets/img/back-mystic.png'"
+                        (mouseout)="mysticShirt = '../../assets/img/front-mystic.png'">
                     <div class="backsquare backsquare-mystic"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-mystic-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-mystic.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-mystic"></div>
                 </div>
@@ -591,7 +604,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-mystic.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-mystic"></div>
                 </div>
@@ -601,15 +614,17 @@
         <div class="row mt-3" *ngIf="currentStoreId == 'maiden'">
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
-                    <img src="../../assets/img/front-maiden.png" alt="" class="item-store-img object-fit-contain">
+                    class="pointer position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
+                    <img [src]="maidenShirt" alt="" class="item-store-img object-fit-contain"
+                        (mouseover)="maidenShirt = '../../assets/img/back-maiden.png'"
+                        (mouseout)="maidenShirt = '../../assets/img/front-maiden.png'">
                     <div class="backsquare backsquare-maiden"></div>
                 </div>
                 <p class="ff-britanica-bold fs-4 fn-maiden-color">t-shirt</p>
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
                     <img src="../../assets/img/bag-maiden.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-maiden"></div>
                 </div>
@@ -617,7 +632,7 @@
             </div>
             <div class="col-4">
                 <div
-                    class="position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
+                    class="pointer position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
                     <img src="../../assets/img/poster-maiden.png" alt="" class="item-store-img object-fit-contain">
                     <div class="backsquare backsquare-maiden"></div>
                 </div>
