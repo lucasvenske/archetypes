@@ -1,5 +1,26 @@
 @import "../../assets/var";
 
+.banner {
+    #title-seven {
+        width: 75%;
+    }
+
+    #title-sister {
+        width: 95%;
+    }
+
+    @media (max-width: 768px) {
+
+        #title-seven {
+            width: 100%;
+        }
+
+        #title-sister {
+            width: 100%;
+        }
+    }
+}
+
 .lines {
     position: relative;
 
@@ -22,9 +43,42 @@
         bottom: 0;
         right: 0;
     }
+
+    @media (max-width: 768px) {
+        &::before {
+            content: unset;
+        }
+
+        &::after {
+            content: unset;
+        }
+    }
 }
 
-.line-top {
+.title-about-line {
+    position: relative;
+    border-right: 1px solid;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $secondary-color;
+        width: 100%;
+        height: 1px;
+        top: 4rem;
+        left: 0;
+    }
+
+    @media (max-width: 768px) {
+        border-right: none;
+
+        &::before {
+            content: unset;
+        }
+    }
+}
+
+.text-about-line {
     position: relative;
 
     &::before {
@@ -33,8 +87,34 @@
         background-color: $secondary-color;
         width: 100%;
         height: 1px;
-        top: 6rem;
+        top: 0;
         left: 0;
+    }
+
+    @media (max-width: 768px) {
+        border-right: 1px solid;
+
+        &::before {
+            width: 108.33333333%;
+        }
+    }
+}
+
+.text-about-line-2 {
+    position: relative;
+
+    @media (max-width: 768px) {
+        border-left: 1px solid;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $secondary-color;
+            width: 108.33333333%;
+            height: 1px;
+            top: 0;
+            right: 0;
+        }
     }
 }
 
@@ -128,6 +208,7 @@
 }
 
 .star-store {
+    width: 70px;
     transition-property: transform;
     transition-duration: 0.8s;
     transform: rotate(0);
@@ -139,6 +220,12 @@
     &:hover+.arch-store {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media(max-width: 768px) {
+    .star-store {
+        width: 50px;
     }
 }
 
