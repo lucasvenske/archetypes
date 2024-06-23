@@ -71,6 +71,7 @@
 
     @media (max-width: 768px) {
         border-right: none;
+        padding-left: 0 !important;
 
         &::before {
             content: unset;
@@ -93,6 +94,7 @@
 
     @media (max-width: 768px) {
         border-right: 1px solid;
+        padding-left: 0 !important;
 
         &::before {
             width: 108.33333333%;
@@ -105,6 +107,7 @@
 
     @media (max-width: 768px) {
         border-left: 1px solid;
+        padding-right: 0 !important;
 
         &::before {
             position: absolute;
