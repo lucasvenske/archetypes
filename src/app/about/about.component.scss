@@ -1,0 +1,67 @@
+@import "../../assets/var";
+
+.title-about-line {
+    position: relative;
+    border-right: 1px solid;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $secondary-color;
+        width: 100%;
+        height: 1px;
+        top: 4rem;
+        left: 0;
+    }
+
+    @media (max-width: 768px) {
+        border-right: none;
+        padding-left: 0 !important;
+
+        &::before {
+            content: unset;
+        }
+    }
+}
+
+.text-about-line {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $secondary-color;
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+    }
+
+    @media (max-width: 768px) {
+        border-right: 1px solid;
+        padding-left: 0 !important;
+
+        &::before {
+            width: 108.33333333%;
+        }
+    }
+}
+
+.text-about-line-2 {
+    position: relative;
+
+    @media (max-width: 768px) {
+        border-left: 1px solid;
+        padding-right: 0 !important;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $secondary-color;
+            width: 108.33333333%;
+            height: 1px;
+            top: 0;
+            right: 0;
+        }
+    }
+}

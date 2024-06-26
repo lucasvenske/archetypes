@@ -2,11 +2,13 @@ import { AfterViewInit, Component, ElementRef, HostListener, Renderer2, ViewChil
 import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { ScrollTriggerDirective } from '../utils/scroll-trigger.directive';
+import { AboutComponent } from '../about/about.component';
+import { StoreComponent } from '../store/store/store.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, ScrollTriggerDirective],
+  imports: [HeaderComponent, CommonModule, ScrollTriggerDirective, AboutComponent, StoreComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -22,16 +24,6 @@ export class HomeComponent implements AfterViewInit {
   public scrollHeight: number = 0;
   public elDistanceToTop: number = 0;
   public currentCardId: string = '';
-  public currentStoreId: string = 'sage';
-
-  public sageShirt: string = '../../assets/img/front-sage.png';
-  public queenShirt: string = '../../assets/img/front-queen.png';
-  public warriorShirt: string = '../../assets/img/front-warrior.png';
-  public motherShirt: string = '../../assets/img/front-mother.png';
-  public loverShirt: string = '../../assets/img/front-lover.png';
-  public mysticShirt: string = '../../assets/img/front-mystic.png';
-  public maidenShirt: string = '../../assets/img/front-maiden.png';
-
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.windowWidth = window.innerWidth;
@@ -68,13 +60,5 @@ export class HomeComponent implements AfterViewInit {
 
   isActiveCard(id: string) {
     return this.currentCardId === id;
-  }
-
-  onClickStore(id: string) {
-    this.currentStoreId = id;
-  }
-
-  isStoreActive(id: string) {
-    return this.currentStoreId === id;
   }
 }
