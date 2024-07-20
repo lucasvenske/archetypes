@@ -34,6 +34,18 @@
     max-height: 480px;
 }
 
+.info-text {
+    font-size: 1.5rem;
+
+    @media(max-width: 1024px) {
+        font-size: 1.25rem;
+    }
+
+    @media(max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
 //reset css
 *,
 *:before,

@@ -1,0 +1,125 @@
+.scrolldiv {
+    position: absolute;
+}
+
+.fixed-content {
+    position: fixed;
+    top: 30px;
+}
+
+.unfixed-content {
+    position: relative;
+}
+
+.arch-section {
+    max-height: calc(100vh - 30px);
+}
+
+.arch-container {
+    min-height: 320px;
+    height: 60vh;
+    max-height: 600px;
+}
+
+.text-body {
+    min-width: 350px;
+}
+
+.card-arch {
+    .body-card-arch {
+        overflow: hidden;
+        width: 0px;
+        transition-property: width;
+        transition-duration: 0.5s;
+    }
+
+    .body-card-arch-mobile {
+        overflow: hidden;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+    }
+
+    .poster {
+        position: absolute;
+        height: calc(100% - 6rem);
+        transform: translateX(-500px);
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
+
+    .poster-mobile {
+        transform: translateY(0px);
+        opacity: 1;
+        transition-property: transform opacity;
+        transition-duration: 0.5s;
+        height: calc(100% - 2rem);
+        width: calc(100% - 2rem);
+    }
+
+    .archetype {
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+    }
+
+    .archetype-mobile {
+        position: absolute;
+        transform: translateX(0px);
+        transition-property: transform;
+        transition-duration: 0.5s;
+    }
+
+
+    &.active {
+        .body-card-arch {
+            width: 350px;
+        }
+
+        .body-card-arch-mobile {
+            opacity: 1;
+        }
+
+        .archetype {
+            opacity: 0;
+        }
+
+        .poster-mobile {
+            transform: translateY(-500px);
+            transition-duration: 0.5s;
+            opacity: 0;
+        }
+
+        .archetype-mobile {
+            transform: translateX(-500px);
+        }
+
+        .poster {
+            transform: translateX(0);
+        }
+    }
+
+}
+
+@media(max-width: 1024px) {
+    /* .poster {
+        transform: translateX(0px);
+        transform: translatey(500px);
+    }
+
+    &.active {
+        .poster {
+            transform: translateY(0);
+        }
+    }
+
+    .slick-current .arch-container {
+        border-right: 1px solid;
+    } */
+}
+
+@media(max-width: 1024px) {
+    .slick-current .arch-container {
+        border-right: 1px solid;
+    }
+}

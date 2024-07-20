@@ -15,7 +15,7 @@
             <div ngxSlickItem class="slide d-flex flex-column align-items-center store-selector pointer"
                 [class.active]="isStoreActive(item.id)" (click)="onClickStore(item.id)">
                 <img [src]="item.img" class="star-store">
-                <p class="ff-britanica-bold fs-4 arch-store text-center" [ngClass]="'fn-' + item.id + '-color'">
+                <p class="ff-britanica-bold info-text arch-store text-center" [ngClass]="'fn-' + item.id + '-color'">
                     {{item.title}}</p>
             </div>
             }
@@ -23,7 +23,7 @@
         </ngx-slick-carousel>
     </div>
 
-    <div class="row mt-3" *ngIf="currentStoreId == 'sage'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'sage')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-sage-color d-flex justify-content-center">
@@ -32,7 +32,7 @@
                     (mouseout)="sageShirt = '../../assets/img/front-sage.png'">
                 <div class="backsquare backsquare-sage"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-sage-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-sage-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -40,7 +40,7 @@
                 <img src="../../assets/img/bag-sage.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-sage"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-sage-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-sage-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -48,10 +48,10 @@
                 <img src="../../assets/img/poster-sage.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-sage"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-sage-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-sage-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'queen'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'queen')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-queen-color d-flex justify-content-center">
@@ -60,7 +60,7 @@
                     (mouseout)="queenShirt = '../../assets/img/front-queen.png'">
                 <div class="backsquare backsquare-queen"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-queen-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-queen-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -68,7 +68,7 @@
                 <img src="../../assets/img/bag-queen.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-queen"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-queen-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-queen-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -76,10 +76,10 @@
                 <img src="../../assets/img/poster-queen.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-queen"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-queen-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-queen-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'warrior'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'warrior')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-warrior-color d-flex justify-content-center">
@@ -88,7 +88,7 @@
                     (mouseout)="warriorShirt = '../../assets/img/front-warrior.png'">
                 <div class="backsquare backsquare-warrior"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-warrior-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-warrior-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -96,7 +96,7 @@
                 <img src="../../assets/img/bag-warrior.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-warrior"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-warrior-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-warrior-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -104,10 +104,10 @@
                 <img src="../../assets/img/poster-warrior.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-warrior"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-warrior-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-warrior-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'mother'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'mother')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-mother-color d-flex justify-content-center">
@@ -116,7 +116,7 @@
                     (mouseout)="motherShirt = '../../assets/img/front-mother.png'">
                 <div class="backsquare backsquare-mother"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mother-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-mother-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -124,7 +124,7 @@
                 <img src="../../assets/img/bag-mother.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-mother"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mother-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-mother-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -132,10 +132,10 @@
                 <img src="../../assets/img/poster-mother.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-mother"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mother-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-mother-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'lover'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'lover')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-lover-color d-flex justify-content-center">
@@ -144,7 +144,7 @@
                     (mouseout)="loverShirt = '../../assets/img/front-lover.png'">
                 <div class="backsquare backsquare-lover"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-lover-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-lover-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -152,7 +152,7 @@
                 <img src="../../assets/img/bag-lover.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-lover"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-lover-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-lover-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -160,10 +160,10 @@
                 <img src="../../assets/img/poster-lover.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-lover"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-lover-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-lover-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'mystic'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'mystic')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-mystic-color d-flex justify-content-center">
@@ -172,7 +172,7 @@
                     (mouseout)="mysticShirt = '../../assets/img/front-mystic.png'">
                 <div class="backsquare backsquare-mystic"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mystic-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-mystic-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -180,7 +180,7 @@
                 <img src="../../assets/img/bag-mystic.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-mystic"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mystic-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-mystic-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -188,10 +188,10 @@
                 <img src="../../assets/img/poster-mystic.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-mystic"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-mystic-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-mystic-color">poster</p>
         </div>
     </div>
-    <div class="row mt-3" *ngIf="currentStoreId == 'maiden'">
+    <div class="row mt-3" [hidden]="!(currentStoreId == 'maiden')">
         <div class="col-md-4 col-6">
             <div
                 class="pointer position-relative item-store border bd-theme border-maiden-color d-flex justify-content-center">
@@ -200,7 +200,7 @@
                     (mouseout)="maidenShirt = '../../assets/img/front-maiden.png'">
                 <div class="backsquare backsquare-maiden"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-maiden-color">t-shirt</p>
+            <p class="ff-britanica-bold info-text fn-maiden-color">t-shirt</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -208,7 +208,7 @@
                 <img src="../../assets/img/bag-maiden.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-maiden"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-maiden-color">tote bag</p>
+            <p class="ff-britanica-bold info-text fn-maiden-color">tote bag</p>
         </div>
         <div class="col-md-4 col-6">
             <div
@@ -216,7 +216,7 @@
                 <img src="../../assets/img/poster-maiden.png" alt="" class="w-100 item-store-img object-fit-contain">
                 <div class="backsquare backsquare-maiden"></div>
             </div>
-            <p class="ff-britanica-bold fs-4 fn-maiden-color">poster</p>
+            <p class="ff-britanica-bold info-text fn-maiden-color">poster</p>
         </div>
     </div>
 
