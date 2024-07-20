@@ -123,3 +123,9 @@
         border-right: 1px solid;
     }
 }
+
+@media(max-width: 768px) {
+    .slick-current .arch-container {
+        border-right: 0px solid;
+    }
+}

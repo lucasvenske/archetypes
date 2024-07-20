@@ -10,11 +10,11 @@
         </svg>
     </div>
     <div class="">
-        <ngx-slick-carousel class="carousel mx-5" #slickModal="slick-carousel" [config]="slideConfig">
+        <ngx-slick-carousel class="carousel mx-ms-5 mx-4" #slickModal="slick-carousel" [config]="slideConfig">
             @for (item of archetypes; track $index) {
             <div ngxSlickItem class="slide " [id]="item.id" (click)="onClickCard(item.id)"
                 [class.active]="isActiveCard(item.id)" class="card-arch pointer">
-                <h1 class="ff-catavalo fs-x fn-color ps-5 mb-2">{{item.title}}</h1>
+                <h1 class="ff-catavalo fs-x fn-color ps-sm-5 ps-0 mb-2 text-center text-sm-start">{{item.title}}</h1>
                 <div
                     class="border-top bd-theme border-color p-3 arch-container d-flex position-relative overflow-hidden">
                     <img class="poster-mobile position-absolute object-fit-contain" [src]="item.img" alt="">
