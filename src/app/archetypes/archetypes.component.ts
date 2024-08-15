@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, Renderer2, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { ScrollTriggerDirective } from '../utils/scroll-trigger.directive';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
@@ -10,7 +10,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   templateUrl: './archetypes.component.html',
   styleUrl: './archetypes.component.scss'
 })
-export class ArchetypesComponent implements AfterViewInit {
+export class ArchetypesComponent implements AfterViewInit, OnInit {
 
   @ViewChild('scrollableElement') scrollableElement!: ElementRef;
   @ViewChild('mainScroll') mainScroll!: ElementRef;
@@ -80,8 +80,9 @@ export class ArchetypesComponent implements AfterViewInit {
 
 
   public fixed: boolean = false;
-  public windowWidth: number = 0;
-  public scrollHeight: number = 0;
+  public windowWidth?: number;
+  public scrollHeight: number = 5600;
+  public scrollHeightDefined: boolean = false;
   public elDistanceToTop: number = 0;
   public currentCardId: string = '';
 
@@ -102,20 +103,22 @@ export class ArchetypesComponent implements AfterViewInit {
     ]
   };
 
+  ngOnInit(): void {
+    this.windowWidth = window.innerWidth;
+
+    if (this.windowWidth! <= 1024)
+      this.isMobile = true;
+  }
+
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.windowWidth = window.innerWidth;
-      console.log(this.mainScroll.nativeElement.getBoundingClientRect())
-      console.log(document.getElementById('teste')?.scrollWidth)
-      this.scrollHeight = 5600;
-
-      if (this.windowWidth <= 1024)
+      if (this.windowWidth! <= 1024)
         this.isMobile = true;
     }, 0);
 
 
 
-    this.elDistanceToTop = window.scrollY + this.mainScroll.nativeElement.getBoundingClientRect().top;
+    this.elDistanceToTop = window.scrollY + this.mainScroll?.nativeElement.getBoundingClientRect().top;
 
   }
 
@@ -132,6 +135,10 @@ export class ArchetypesComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     if (this.mainScroll) {
+      if (!this.scrollHeightDefined) {
+        this.scrollHeight = this.mainScroll.nativeElement.scrollWidth;
+        this.scrollHeightDefined = true;
+      }
       const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
       /* if (scrollTop - this.elDistanceToTop <= this.mainScroll.nativeElement.scrollWidth - window.innerWidth / 3) {
       } */

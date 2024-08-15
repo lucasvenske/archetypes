@@ -122,6 +122,10 @@
     .slick-current .arch-container {
         border-right: 1px solid;
     }
+
+    .text-body {
+        min-width: 0px;
+    }
 }
 
 @media(max-width: 768px) {

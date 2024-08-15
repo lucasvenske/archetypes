@@ -23,10 +23,10 @@
                             <img class="h-100 position-absolute" [src]="item.imgComp" alt="">
                         </div>
                         <div class="text-body">
-                            <p class="ff-britanica fs-6 fn-color ps-4">{{item.content}}</p>
+                            <p class="ff-britanica fs-6 fn-color">{{item.content}}</p>
                             <div class="caracteristics d-flex flex-wrap">
                                 @for (quality of item.qualities; track $index) {
-                                <span class="ff-britanica fs-6 fn-color ps-4 d-flex">
+                                <span class="ff-britanica fs-6 fn-color pe-3 d-flex">
                                     <img src="../../assets/img/star0.svg" class="me-2">
                                     {{quality}}
                                 </span>
