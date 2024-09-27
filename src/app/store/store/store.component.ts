@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { Archetypes } from '../../utils/archetypes.enum';
 
 @Component({
   selector: 'app-store',
@@ -13,43 +14,43 @@ export class StoreComponent {
 
   starStoreList = [
     {
-      id: "sage",
+      id: Archetypes.Sage,
       title: "the sage",
       img: "../../assets/img/star1.svg"
     },
     {
-      id: "queen",
+      id: Archetypes.Queen,
       title: "the queen",
       img: "../../assets/img/star2.svg"
     },
     {
-      id: "warrior",
+      id: Archetypes.Warrior,
       title: "the warrior",
       img: "../../assets/img/star3.svg"
     },
     {
-      id: "mother",
+      id: Archetypes.Mother,
       title: "the mother",
       img: "../../assets/img/star4.svg"
     },
     {
-      id: "lover",
+      id: Archetypes.Lover,
       title: "the lover",
       img: "../../assets/img/star5.svg"
     },
     {
-      id: "mystic",
+      id: Archetypes.Mystic,
       title: "the mystic",
       img: "../../assets/img/star6.svg"
     },
     {
-      id: "maiden",
+      id: Archetypes.Maiden,
       title: "the maiden",
       img: "../../assets/img/star7.svg"
     },
   ]
 
-  public currentStoreId: string = 'sage';
+  public currentStoreId: string = Archetypes.Sage;
   public sageShirt: string = '../../assets/img/front-sage.png';
   public queenShirt: string = '../../assets/img/front-queen.png';
   public warriorShirt: string = '../../assets/img/front-warrior.png';

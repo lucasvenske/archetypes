@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { ScrollTriggerDirective } from '../utils/scroll-trigger.directive';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { Archetypes } from '../utils/archetypes.enum';
 
 @Component({
   selector: 'app-archetypes',
@@ -21,7 +22,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
 
   archetypes = [
     {
-      id: "sage",
+      id: Archetypes.Sage,
       title: "the sage",
       img: "../../assets/img/arch1.png",
       imgComp: "../../assets/img/comp1.png",
@@ -29,7 +30,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['intellectual', 'detached', 'analytical', 'objective', 'reclusive', 'insightful']
     },
     {
-      id: "queen",
+      id: Archetypes.Queen,
       title: "the queen",
       img: "../../assets/img/arch2.png",
       imgComp: "../../assets/img/comp2.png",
@@ -37,7 +38,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['supportive', 'controlling', 'empathetic', 'perfectionistic', 'loyal', 'stubborn']
     },
     {
-      id: "warrior",
+      id: Archetypes.Warrior,
       title: "the warrior",
       img: "../../assets/img/arch3.png",
       imgComp: "../../assets/img/comp3.png",
@@ -45,7 +46,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['determined', 'agressive', 'confident', 'impatient', 'protective', 'resilient']
     },
     {
-      id: "mother",
+      id: Archetypes.Mother,
       title: "the mother",
       img: "../../assets/img/arch4.png",
       imgComp: "../../assets/img/comp4.png",
@@ -53,7 +54,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['nurturing', 'anxious', 'compassionate', 'self-sacrificing', 'patient', 'overprotective']
     },
     {
-      id: "lover",
+      id: Archetypes.Lover,
       title: "the lover",
       img: "../../assets/img/arch5.png",
       imgComp: "../../assets/img/comp5.png",
@@ -61,7 +62,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['passionate', 'jealous', 'creative', 'impulsive', 'charismatic', 'dependent']
     },
     {
-      id: "mystic",
+      id: Archetypes.Mystic,
       title: "the mystic",
       img: "../../assets/img/arch6.png",
       imgComp: "../../assets/img/comp6.png",
@@ -69,7 +70,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
       qualities: ['intuitive', 'isolated', 'reflective', 'detached', 'calm', 'neglectful']
     },
     {
-      id: "maiden",
+      id: Archetypes.Maiden,
       title: "the maiden",
       img: "../../assets/img/arch7.png",
       imgComp: "../../assets/img/comp7.png",

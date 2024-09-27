@@ -1,26 +1,28 @@
 @import '../../assets/var';
 
-.fixed-header {
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    height: 0;
-    transition-duration: 0.5s;
-    overflow: hidden;
-    top: 0;
+@media(max-width: 991px) {
+    .fixed-header {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 0;
+        transition-duration: 0.5s;
+        overflow: hidden;
+        top: 0;
 
-    .navbar {
-        background-color: $background-color !important;
+        .navbar {
+            background-color: $background-color !important;
+        }
+
+        &.actived {
+            overflow: unset;
+            height: 73px;
+        }
     }
 
-    &.actived {
-        overflow: unset;
+    .empty.actived {
         height: 73px;
     }
-}
-
-.empty.actived {
-    height: 73px;
 }
 
 .item-header {

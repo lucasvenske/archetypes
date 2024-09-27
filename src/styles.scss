@@ -178,5 +178,12 @@ body {
 .backsquare-maiden {
     background-color: $maiden-color;
 }
+
+.star-store svg path {
+    fill: pink !important;
+    color: pink !important;
+
+}
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
