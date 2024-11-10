@@ -1,10 +1,11 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgbModule],
+  imports: [NgbModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

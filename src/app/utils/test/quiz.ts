@@ -1,9 +1,10 @@
+import { Archetypes } from "../archetypes.enum";
 import { Question } from "./question.interface";
 
 export class Quiz {
     private questions: Question[];
-    private selectedAnswers: { [archetype: string]: number } = {};
-    private currentQuestionIndex: number = 0;
+    public selectedAnswers: { [archetype: string]: number } = {};
+    public currentQuestionIndex: number = 0;
 
     constructor(questions: Question[]) {
         this.questions = questions;
@@ -15,16 +16,23 @@ export class Quiz {
         return this.questions[this.currentQuestionIndex];
     }
 
-    submitAnswer(archetype: string): void {
+    submitAnswer(archetype: Archetypes): void {
+        var previousAnswer = this.getCurrentQuestion().answer;
+
+        if (previousAnswer) {
+            this.selectedAnswers[previousAnswer]--;
+        }
+
+        this.getCurrentQuestion().answer = archetype;
+
         if (!this.selectedAnswers[archetype]) {
             this.selectedAnswers[archetype] = 0;
         }
         this.selectedAnswers[archetype]++;
-        this.currentQuestionIndex++;
     }
 
     isQuizFinished(): boolean {
-        return this.currentQuestionIndex >= this.questions.length;
+        return this.currentQuestionIndex + 1 >= this.questions.length;
     }
 
     getResult(): string {

@@ -6,6 +6,7 @@ export const questions: Question[] = [
         id: 1,
         text: 'Which of these activities do you prefer?',
         theme: Archetypes.Lover,
+        answer: null,
         options: [
             { text: 'Discover new places', archetype: Archetypes.Maiden, selected: false },
             { text: 'Organize a family gathering', archetype: Archetypes.Mother, selected: false },
@@ -20,6 +21,7 @@ export const questions: Question[] = [
         id: 2,
         text: 'What is your biggest fear?',
         theme: Archetypes.Mother,
+        answer: null,
         options: [
             { text: 'Losing my freedom', archetype: Archetypes.Maiden, selected: false },
             { text: 'Failing to care for loved ones', archetype: Archetypes.Mother, selected: false },
@@ -34,6 +36,7 @@ export const questions: Question[] = [
         id: 3,
         text: 'How do you deal with challenges?',
         theme: Archetypes.Mystic,
+        answer: null,
         options: [
             { text: 'See them as learning opportunities.', archetype: Archetypes.Maiden, selected: false },
             { text: 'Seek support from family and friends.', archetype: Archetypes.Mother, selected: false },
@@ -48,6 +51,7 @@ export const questions: Question[] = [
         id: 4,
         text: 'Which of these qualities do you value most in yourself?',
         theme: Archetypes.Queen,
+        answer: null,
         options: [
             { text: 'Optimism and enthusiasm', archetype: Archetypes.Maiden, selected: false },
             { text: 'Patience and reliability', archetype: Archetypes.Mother, selected: false },
@@ -62,6 +66,7 @@ export const questions: Question[] = [
         id: 5,
         text: 'How do your friends and family usually describe you?',
         theme: Archetypes.Maiden,
+        answer: null,
         options: [
             { text: 'Cheerful and full of life', archetype: Archetypes.Maiden, selected: false },
             { text: 'Affectionate and warm', archetype: Archetypes.Mother, selected: false },
@@ -76,6 +81,7 @@ export const questions: Question[] = [
         id: 6,
         text: 'What do you consider your biggest flaw?',
         theme: Archetypes.Sage,
+        answer: null,
         options: [
             { text: 'Being a bit naive', archetype: Archetypes.Maiden, selected: false },
             { text: 'Forgetting to take care of yourself', archetype: Archetypes.Mother, selected: false },
@@ -90,6 +96,7 @@ export const questions: Question[] = [
         id: 7,
         text: 'How do you react to sudden changes?',
         theme: Archetypes.Warrior,
+        answer: null,
         options: [
             { text: 'See them as new opportunities.', archetype: Archetypes.Maiden, selected: false },
             { text: 'Try to maintain stability and comfort.', archetype: Archetypes.Mother, selected: false },
@@ -104,6 +111,7 @@ export const questions: Question[] = [
         id: 8,
         text: 'Which of these situations would make you happiest?',
         theme: Archetypes.Lover,
+        answer: null,
         options: [
             { text: 'Exploring a new destination without a defined plan', archetype: Archetypes.Maiden, selected: false },
             { text: 'Gathering my family and friends for a big dinner', archetype: Archetypes.Mother, selected: false },
@@ -118,6 +126,7 @@ export const questions: Question[] = [
         id: 9,
         text: 'Among these animals, which is your favorite?',
         theme: Archetypes.Mother,
+        answer: null,
         options: [
             { text: 'Butterfly', archetype: Archetypes.Maiden, selected: false },
             { text: 'Bear', archetype: Archetypes.Mother, selected: false },

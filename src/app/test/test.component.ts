@@ -5,6 +5,11 @@ import { questions } from '../utils/test/questions.const';
 import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
+import { ArchetypesColors } from '../utils/archetype-color.enum';
+import { Option, Question } from '../utils/test/question.interface';
+import { Archetypes } from '../utils/archetypes.enum';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-test',
   standalone: true,
@@ -27,8 +32,9 @@ export class TestComponent implements OnInit {
 
   @ViewChild('slickModal') slickModal: SlickCarouselComponent | null = null;
 
-  quiz: Quiz = new Quiz(questions);
-
+  questionsCopy = JSON.parse(JSON.stringify(questions));
+  quiz: Quiz = new Quiz(this.questionsCopy);
+  ArchetypesColors = ArchetypesColors;
   currentSlide: number = 1;
 
   slideConfig = {
@@ -46,8 +52,40 @@ export class TestComponent implements OnInit {
     {
       image1: "../../assets/img/test/mao-verde.svg",
       image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
+    },
+    {
+      image1: "../../assets/img/test/mao-verde.svg",
+      image2: "../../assets/img/test/lua-verde.svg"
     }
   ]
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.slickModal?.initSlick();
@@ -55,9 +93,19 @@ export class TestComponent implements OnInit {
 
   afterChange(event: any) {
     this.currentSlide = event.currentSlide + 1;
+    this.quiz.currentQuestionIndex = event.currentSlide;
   }
 
-  answer(archetype: string): void {
+  handleClick(archetype: Archetypes) {
+    this.quiz.submitAnswer(archetype);
+    if (this.quiz.isQuizFinished()) {
+      this.router.navigate(["result", this.quiz.getResult()])
+    } else {
+      this.next();
+    }
+  }
+
+  answer(archetype: Archetypes): void {
     this.quiz.submitAnswer(archetype);
   }
 

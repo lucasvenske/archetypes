@@ -1,3 +1,45 @@
+@import "../../assets/var";
+
 .arrows {
     z-index: 9999;
+}
+
+.answer-button {
+    height: 70px;
+
+    svg {
+        min-width: 35px;
+        min-height: 35px;
+    }
+
+    &:hover {
+
+        svg.mother {
+            fill: $mother-color;
+        }
+
+        svg.sage {
+            fill: $secondary-color;
+        }
+
+        svg.mystic {
+            fill: $mystic-color;
+        }
+
+        svg.queen {
+            fill: $queen-color;
+        }
+
+        svg.warrior {
+            fill: $warrior-color;
+        }
+
+        svg.lover {
+            fill: $primary-color;
+        }
+
+        svg.maiden {
+            fill: $maiden-color;
+        }
+    }
 }
