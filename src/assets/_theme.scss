@@ -12,6 +12,10 @@
 
 .fs-x {
     font-size: 3rem;
+
+    @media(max-width:526px) {
+        font-size: 2.3rem;
+    }
 }
 
 .mw-350-px {
@@ -42,6 +46,14 @@
     }
 
     @media(max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
+.question-text {
+    font-size: 1.25rem;
+
+    @media(max-width: 1200px) {
         font-size: 1rem;
     }
 }

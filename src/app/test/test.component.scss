@@ -4,7 +4,28 @@
     z-index: 9999;
 }
 
+.question-container {
+    max-width: 700px;
+}
+
+.custom-arrow {
+    top: 20px;
+    font-size: 5rem;
+
+    &.left {
+        left: -20px;
+    }
+
+    &.right {
+        right: -20px;
+    }
+}
+
 .answer-button {
+    @media(max-width: 992px) {
+        height: 145px;
+    }
+
     height: 70px;
 
     svg {
