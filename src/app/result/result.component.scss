@@ -6,4 +6,25 @@
     bottom: -120px;
     right: -75px;
     background-color: $background-color;
+
+    @media(max-width:1200px) {
+        width: 90px;
+        height: 80px;
+        bottom: -40px;
+        right: -40px;
+    }
+
+    @media(max-width:768px) {
+        right: -20px;
+        bottom: -60px;
+    }
+}
+
+.collection-arrow::before {
+    content: ">";
+    position: absolute;
+    bottom: 0;
+    width: calc(100% + 10px);
+    color: black;
+    left: 0;
 }

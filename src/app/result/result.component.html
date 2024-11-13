@@ -1,6 +1,6 @@
 <!-- <app-header></app-header> -->
 
-<div class="container-lg container-fluid mt-5">
+<div class="container-lg container-fluid mt-5 pb-5">
     <div class="pb-5 border-bottom bd-theme border-color w-100 mb-3">
         <svg width="100%" style="max-width: 450px" viewBox="0 0 502.701 74.201" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
@@ -11,25 +11,25 @@
             </g>
         </svg>
     </div>
-    <div class="mt-5 mx-5 py-5 border-top border-bottom bd-theme border-color">
-
+    <div class="mt-5 mx-4 mx-sm-5 py-5 border-top bd-theme border-color">
         <h1 [ngClass]="'fn-' + archetypeResult.id + '-color'"
             class="ff-catavalo fs-x fn-color ps-sm-5 ps-0 mb-2 text-center">{{archetypeResult.title}}
         </h1>
         <div class="row mt-5">
-            <div class="col-5">
+            <div class="col-md-3 col-lg-5 d-none d-md-block">
                 <img class="w-100" [src]="archetypeResult.image" alt="">
             </div>
-            <div class="col-6">
-                <div class="mb-2 p-4 border bd-theme position-relative"
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="mb-2 p-sm-4 p-3 border bd-theme position-relative"
                     [ngClass]="'border-'+ archetypeResult.id + '-color' ">
-                    <p class="m-0 ff-britanica fs-5 mb-3"
+                    <p class="m-0 ff-britanica normal-textsize mb-3"
                         [ngClass]="'fn-' + archetypeResult.id + '-color border-'+ archetypeResult.id + '-color' ">
                         {{archetypeResult.text}}
                     </p>
                     <div class="position-absolute collection-container">
-                        <img [src]="archetypeResult.icon" alt="">
-                        <a [routerLink]="['/']" class="ff-catavalo fs-5 d-flex align-items-center text-decoration-none"
+                        <img [src]="archetypeResult.icon" class="w-100" alt="">
+                        <a [routerLink]="['/']"
+                            class="ff-catavalo normal-textsize d-flex align-items-center text-decoration-none "
                             [ngClass]="'fn-' + archetypeResult.id + '-color'">
                             <svg [class]="archetypeResult.id" class="float-start me-2" width="25" height="25"
                                 viewBox="0 0 40 41" [attr.fill]="ArchetypesColors[archetypeResult.id]"
@@ -38,7 +38,9 @@
                                     d="M20.4511 3.84297L19.9764 2.40793L19.5017 3.84297L16.9623 11.5197L10.2642 6.83169L9.00992 5.9538L9.50432 7.40278L12.0629 14.9014H4H2.43862L3.70955 15.8084L10.3453 20.544L3.7543 25.3394L2.49198 26.2578L4.053 26.2437L12.1159 26.1707L9.62776 33.6923L9.14708 35.1454L10.3929 34.2563L17.0466 29.508L19.658 37.1615L20.1461 38.592L20.6074 37.1526L23.029 29.5956L29.56 34.2563L30.8058 35.1454L30.3251 33.6923L27.7901 26.0287L36.0045 25.9544L37.5661 25.9402L36.2867 25.0447L29.7306 20.4562L36.2433 15.8084L37.5143 14.9014H35.9529H27.7377L30.2008 7.21509L30.6677 5.75803L29.4305 6.6582L22.9436 11.3778L20.4511 3.84297Z"
                                     [attr.stroke]="ArchetypesColors[archetypeResult.id]" />
                             </svg>
-                            Collection
+                            <span class="collection-arrow position-relative">
+                                Collection
+                            </span>
                         </a>
                     </div>
                 </div>
