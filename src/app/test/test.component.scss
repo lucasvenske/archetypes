@@ -64,3 +64,26 @@
         }
     }
 }
+
+.take-test {
+    width: fit-content;
+    place-self: center;
+
+    svg {
+        transition-property: transform;
+        transition-duration: 0.8s;
+        transform: rotate(0);
+    }
+
+    &:hover {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.back {
+    min-width: 65px;
+    text-decoration: none;
+    height: fit-content;
+}

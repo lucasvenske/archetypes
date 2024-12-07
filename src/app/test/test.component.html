@@ -1,7 +1,7 @@
 <!-- <app-header></app-header> -->
 
 <div class="container-lg container-fluid mt-5">
-    <div class="pb-5 border-bottom bd-theme border-color w-100 mb-3">
+    <div class="pb-5 border-bottom bd-theme border-color w-100 mb-3 d-flex justify-content-between align-items-center">
         <svg width="100%" style="max-width: 450px" viewBox="0 0 502.701 74.201" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" fill-rule="evenodd" font-size="9pt" fill="#000" style="fill:#000">
                 <path
@@ -9,18 +9,24 @@
                     vector-effect="non-scaling-stroke" />
             </g>
         </svg>
+        <a [routerLink]="['/']" class="ff-britanica normal-textsize back fn-color">
+            < back</a>
     </div>
-    <div class="mt-5 mx-4 mx-sm-5 py-5 border-top border-bottom bd-theme border-color">
+    <div class="mt-5 mx-4 mx-sm-5 py-5 border-top bd-theme border-color">
         <div class="row justify-content-lg-between justify-content-center">
+
             <div class="col-2 d-lg-block d-none">
+                @if (slickInitialized) {
                 <h1 class="ff-catavalo fs-x fn-color arrows">
                     <span (click)="prev()" class="pointer">
                         < </span>
                             {{ currentSlide }}/{{quiz.getQuestions.length}}
                             <span (click)="next()" class="pointer">></span>
                 </h1>
+                }
             </div>
             <div class="col-lg-8 col-12 question-container position-relative">
+                @if (slickInitialized) {
                 <span (click)="prev()"
                     class="custom-arrow left ff-catavalo pointer d-block d-lg-none position-absolute">
                     < </span>
@@ -58,6 +64,20 @@
                         </ngx-slick-carousel>
                         <span (click)="next()"
                             class="custom-arrow right ff-catavalo pointer d-block d-lg-none position-absolute">></span>
+                        }@else{
+                        <h1 class="ff-catavalo fs-x fn-color text-center mt-5">Which sister are you?</h1>
+                        <p class="take-test d-flex flex-column align-items-center ff-britanica-bold normal-textsize text-center pointer my-5"
+                            (click)="onInitSlick()">
+                            <svg class="float-start me-2" width="60" height="60" viewBox="0 0 40 41" fill="#000"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.4511 3.84297L19.9764 2.40793L19.5017 3.84297L16.9623 11.5197L10.2642 6.83169L9.00992 5.9538L9.50432 7.40278L12.0629 14.9014H4H2.43862L3.70955 15.8084L10.3453 20.544L3.7543 25.3394L2.49198 26.2578L4.053 26.2437L12.1159 26.1707L9.62776 33.6923L9.14708 35.1454L10.3929 34.2563L17.0466 29.508L19.658 37.1615L20.1461 38.592L20.6074 37.1526L23.029 29.5956L29.56 34.2563L30.8058 35.1454L30.3251 33.6923L27.7901 26.0287L36.0045 25.9544L37.5661 25.9402L36.2867 25.0447L29.7306 20.4562L36.2433 15.8084L37.5143 14.9014H35.9529H27.7377L30.2008 7.21509L30.6677 5.75803L29.4305 6.6582L22.9436 11.3778L20.4511 3.84297Z"
+                                    stroke="#000" />
+                            </svg>
+                            Take Test
+                        </p>
+                        }
+
             </div>
             <div class="col-2 d-lg-block d-none">
             </div>

@@ -8,12 +8,12 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { ArchetypesColors } from '../utils/archetype-color.enum';
 import { Option, Question } from '../utils/test/question.interface';
 import { Archetypes } from '../utils/archetypes.enum';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [HeaderComponent, SlickCarouselModule],
+  imports: [HeaderComponent, SlickCarouselModule, RouterModule],
   templateUrl: './test.component.html',
   styleUrl: './test.component.scss',
   animations: [
@@ -28,7 +28,7 @@ import { Router } from '@angular/router';
     ])
   ]
 })
-export class TestComponent implements OnInit {
+export class TestComponent {
 
   @ViewChild('slickModal') slickModal: SlickCarouselComponent | null = null;
 
@@ -36,6 +36,7 @@ export class TestComponent implements OnInit {
   quiz: Quiz = new Quiz(this.questionsCopy);
   ArchetypesColors = ArchetypesColors;
   currentSlide: number = 1;
+  slickInitialized = false;
 
   slideConfig = {
     slidesToShow: 1,
@@ -87,8 +88,9 @@ export class TestComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  onInitSlick(): void {
     this.slickModal?.initSlick();
+    this.slickInitialized = !this.slickInitialized;
   }
 
   afterChange(event: any) {

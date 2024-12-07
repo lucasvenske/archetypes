@@ -107,6 +107,7 @@ export class ArchetypesComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.windowWidth = window.innerWidth;
 
+    this.scrollHeightDefined = false;
     if (this.windowWidth! <= 1024)
       this.isMobile = true;
   }
