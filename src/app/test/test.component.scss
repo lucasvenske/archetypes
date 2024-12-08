@@ -67,7 +67,8 @@
 
 .take-test {
     width: fit-content;
-    place-self: center;
+    margin-left: auto;
+    margin-right: auto;
 
     svg {
         transition-property: transform;
